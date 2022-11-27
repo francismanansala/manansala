@@ -1,0 +1,20 @@
+query GetUsers($first: Int, $sortOrder: SortOrder!, $orderBy: OrderUsersBy!, $after: String, $last: Int, $before: String) {
+  users(first: $first, sortOrder: $sortOrder, orderBy: $orderBy, after: $after, last: $last, before: $before) {
+    pageInfo {
+      endCursor
+      hasNextPage
+      hasPreviousPage
+      startCursor
+    }
+    edges {
+      cursor
+      node {
+        id
+        email
+        role
+        createdAt
+        updatedAt
+      }
+    }
+  }
+}
