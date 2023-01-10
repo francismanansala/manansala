@@ -6,6 +6,7 @@ const client = new ApolloClient({
     uri: process.env.NEXT_PUBLIC_GRAPHQL_URL,
     batchMax: 5,
     batchInterval: 20,
+    credentials: 'same-origin',
   }),
   cache: new InMemoryCache(),
 })

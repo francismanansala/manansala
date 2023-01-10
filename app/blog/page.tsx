@@ -1,14 +1,14 @@
-import Box from '@/components/mui/box'
 import Container from '@/components/mui/container'
 import Toolbar from '@/components/mui/toolbar'
 import Typography from '@/components/mui/typography'
-import UserList from '@/components/user-list'
+import RichTextEditor from '@/components/rich-text-editor'
 
 async function DefaultPage(): Promise<React.ReactElement> {
   return (
     <Container>
       <Toolbar />
       <Typography variant='h2'>Blog</Typography>
+      <RichTextEditor />
       <Typography>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt urna et viverra dignissim. Aenean sollicitudin vestibulum magna, sed pretium nisi. Ut pulvinar blandit ex, posuere porttitor lacus consequat ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac sapien vitae lorem eleifend lacinia. Sed blandit sodales nibh non molestie. Phasellus tempor cursus tellus id varius. Sed at risus in augue mollis pretium. Ut cursus, ante eget vehicula venenatis, ex urna blandit neque, vel commodo ex sapien id turpis. Quisque sit amet egestas ex. Sed in elementum risus, dignissim hendrerit magna. Proin tincidunt facilisis faucibus. Morbi eu gravida sem. Proin quam leo, lacinia non nulla non, fringilla malesuada diam.</Typography>
 
       <Typography>Maecenas imperdiet dolor in malesuada malesuada. Proin scelerisque, mi in gravida vehicula, tortor tellus finibus quam, non pulvinar leo lectus et leo. Vestibulum ac odio blandit, porta nisl nec, malesuada dui. Vestibulum facilisis volutpat ligula sed bibendum. Integer et metus enim. Integer tempor fermentum dignissim. Etiam scelerisque vel felis quis semper.</Typography>

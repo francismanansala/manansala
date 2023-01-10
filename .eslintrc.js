@@ -1,11 +1,13 @@
 const MAX_CODE_LENGTH = 120
 
+// eslint-disable-next-line no-undef
 module.exports = {
   extends: [
-    'next/core-web-vitals',
+    'plugin:@next/next/recommended',
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:jsonc/recommended-with-jsonc',
+    'next/core-web-vitals',
   ],
   parser: '@typescript-eslint/parser',
   plugins: [
@@ -13,6 +15,7 @@ module.exports = {
     'sort-keys-fix',
     'typescript-sort-keys',
     '@typescript-eslint',
+    'react-hooks',
   ],
   ignorePatterns: ['generated/*'],
   root: true,
@@ -33,8 +36,8 @@ module.exports = {
     'computed-property-spacing': ['error'],
     'function-paren-newline': ['error', 'consistent'],
     'import/no-named-as-default': 'off',
-    indent: ['error', 2, { SwitchCase: 2 }],
-    'jsonc/indent': ['error', 2, { SwitchCase: 2 }], 
+    indent: ['error', 2, { SwitchCase: 1 }],
+    'jsonc/indent': ['error', 2], 
     'jsonc/object-curly-newline': ['error', { consistent: true, multiline: true }],
     'jsonc/object-curly-spacing': ['error', 'always'],
     'jsonc/object-property-newline': ['error', { allowAllPropertiesOnSameLine: false }],

@@ -13,11 +13,9 @@ export default function HeroContainer({ children }: IProps): React.ReactElement 
     <Container sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
       <Box
         alignContent='center'
-        textAlign='center'
         sx={{
-          m: 'auto',
+          m: 'auto 0',
           position: 'relative',
-          maxWidth: '700px',
           pb: 3,
         }}
       >

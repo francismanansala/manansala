@@ -78,7 +78,7 @@ export default function Reveal({
   )
 
   const SlidePlaceholder = ({ children }: {children: React.ReactElement}): React.ReactElement => (
-    disableFade ?
+    disableSlide ?
       <>
         {children}
       </>

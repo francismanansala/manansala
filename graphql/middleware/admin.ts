@@ -7,7 +7,6 @@ import { IShieldContext } from 'graphql-shield/typings/types'
 import { Role } from '@/generated/prisma-client'
 
 const isAdmin = rule({ cache: 'contextual' })((_parent, _args, ctx: Context) => {
-  console.log('isAdmin', ctx.user?.role === 'ADMIN')
   return Boolean(ctx.user?.role === 'ADMIN')
 })
 

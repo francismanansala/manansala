@@ -2,9 +2,11 @@
 
 import { signOut } from 'next-auth/react'
 
-import Button, { ButtonProps } from '@mui/material/Button'
+import Button from '@mui/material/Button'
+import { useRouter } from 'next/navigation'
 
 
-export default function GoogleLoginButton(props: ButtonProps): React.ReactElement {
-  return (<><Button onClick={(): void => {signOut()}} {...props}>Sign Out</Button>{}</>)
+export default function LogoutButton(): React.ReactElement {
+  const router = useRouter()
+  return (<><Button onClick={(): void => {signOut({ redirect: false });router.push('/login')}}>Sign Out</Button>{}</>)
 }

@@ -3,7 +3,6 @@ import Card from '@/components/mui/card'
 import CardContent from '@/components/mui/card-content'
 
 import Avatar from '@/components/mui/avatar'
-import { blue } from '@mui/material/colors'
 import Reveal from '@/components/transitions/reveal'
 import Typography from '@/components/mui/typography'
 import { SxProps } from '@mui/material/styles'
@@ -16,12 +15,12 @@ export default function PitchSection(): React.ReactElement {
   const AVATAR_LARGE_STYLES = {
     width: '150px',
     height: '150px',
-    color: blue[700],
+    color: 'primary.main',
     bgcolor: 'transparent',
     border: '4px solid',
   }
 
-  const ICON_STYLES: SxProps = { fontSize: '100px', color: blue[700], textAlign: 'center' }
+  const ICON_STYLES: SxProps = { fontSize: '100px', color: 'primary.main', textAlign: 'center' }
   return (
     <Box pt={6} maxWidth={950}>
       <Card variant='outlined' sx={{ px: { sm:6, xs:1 }, py: 2 }}>

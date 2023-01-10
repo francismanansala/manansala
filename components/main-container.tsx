@@ -9,7 +9,7 @@ interface IProps {
 
 export default function MainContainer({ children }: IProps): React.ReactElement {
   return (
-    <Container maxWidth="lg" sx={{ p: { xs: 0 } }}>
+    <Container maxWidth="lg" sx={{ p: { xs: 0 }, flexGrow: 1, display: 'flex',  alignItems: 'center' }}>
       {children}
     </Container>
   )

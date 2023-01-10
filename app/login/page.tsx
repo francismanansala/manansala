@@ -1,22 +1,24 @@
-import LoginButtons from '@/components/google-auth/login-buttons'
+import { redirect } from 'next/navigation'
+import { unstable_getServerSession } from 'next-auth/next'
+
+import LoginCard from '@/components/login-card'
 import Box from '@/components/mui/box'
-import Card from '@/components/mui/card'
-import CardContent from '@/components/mui/card-content'
 import Container from '@/components/mui/container'
 import Toolbar from '@/components/mui/toolbar'
-import Typography from '@/components/mui/typography'
+import { authOptions } from 'pages/api/auth/[...nextauth]'
+import MainContainer from '@/components/main-container'
+
 
 async function LoginPage(): Promise<React.ReactElement> {
+  const session = await unstable_getServerSession(authOptions)
+
+  if (session?.user) redirect('/account')
+
   return (
-    <Container>
+    <Container sx={{ height: '100%' }}>
       <Toolbar />
-      <Box p={2}>
-        <Card variant='outlined' sx={{ maxWidth:500, mx: 'auto', textAlign: 'center' }} >
-          <CardContent>
-            <Typography variant='h3' fontWeight={500}>Log in</Typography>
-            <LoginButtons />
-          </CardContent>
-        </Card>
+      <Box className='test' p={2} sx={{ margin: 'auto' }}>
+        <LoginCard />
       </Box>
     </Container>
   )
